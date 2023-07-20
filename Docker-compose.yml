@@ -25,7 +25,7 @@ services:
       NB_GID: 1000
       CHOWN_HOME: 'yes'
       CHOWN_HOME_OPTS: '-R'
-      # SPARK_CLASSPATH: '/home/coder/working_dir/driver_jdbc/postgresql-42.2.27.jre7.jar'
+      SPARK_CLASSPATH: '/home/andres/working_dir/driver_jdbc/postgresql-42.2.27.jre7.jar'
     networks:
       pyspark_network:
         ipv4_address: 172.7.7.1
