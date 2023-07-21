@@ -2,3 +2,10 @@ working_dir/*.env
 Files/
 working_dir/Datasets/*
 driver_jdbc/
+
+# Extensions
+*.zip
+*.csv
+*.parquet
+*.json
+*.xls
