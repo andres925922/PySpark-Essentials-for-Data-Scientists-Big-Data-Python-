@@ -11,5 +11,5 @@ class Session:
                             .getOrCreate()
     
     @property
-    def session(self):
+    def session(self) -> SparkSession:
         return self._session

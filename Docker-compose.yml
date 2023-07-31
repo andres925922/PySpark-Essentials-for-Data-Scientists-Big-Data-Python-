@@ -4,8 +4,10 @@ version: '3.3'
 services:
 
   pyspark:
-    image: jupyter-pyspark
+    # image: jupyter-pyspark
+    build: .
     # limit the memory and cpu usage
+    # command: pip install -r /tmp/requirements.txt
     mem_limit: 512m
     mem_reservation: 128M
     cpus: 0.5
@@ -26,15 +28,16 @@ services:
       CHOWN_HOME: 'yes'
       CHOWN_HOME_OPTS: '-R'
       SPARK_CLASSPATH: '/home/andres/working_dir/driver_jdbc/postgresql-42.2.27.jre7.jar'
-    networks:
-      pyspark_network:
-        ipv4_address: 172.7.7.1
+      
+#     networks:
+#       pyspark_network:
+#         ipv4_address: 172.7.7.1
 
-networks:
-  pyspark_network: # Name of the network
-    ipam: # IP Address Management
-      driver: default
-      config:
-        - subnet: 172.7.7.0/16 # Subnet
-        # 172.7.7.0 is the default subnet for docker
-        # 16 is the number of bits used for the network
+# networks:
+#   pyspark_network: # Name of the network
+#     ipam: # IP Address Management
+#       driver: default
+#       config:
+#         - subnet: 172.7.7.0/16 # Subnet
+#         # 172.7.7.0 is the default subnet for docker
+#         # 16 is the number of bits used for the network

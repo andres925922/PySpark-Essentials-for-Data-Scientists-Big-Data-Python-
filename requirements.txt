@@ -2,4 +2,7 @@ pandas
 numpy
 matplotlib
 pyspark
+tensorflow
+IPython
 requests
+jupyter-server<2.0.0
